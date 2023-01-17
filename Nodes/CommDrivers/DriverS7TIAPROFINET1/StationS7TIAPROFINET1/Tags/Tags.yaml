@@ -1,0 +1,409 @@
+Name: Tags
+Type: BaseObjectType
+Children:
+- Name: PLC_EFB22029
+  Type: TagStructure
+  Children:
+  - Name: DB_Generale
+    Type: TagStructure
+    Children:
+    - Name: Abilita_Alim1
+      Id: g=6e7d6ea1251adac74445060ef58e3128
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Generale.Abilita_Alim1"
+    - Name: Abilita_Alim23
+      Id: g=7000bfcc95a60ddbe458612d999586eb
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Generale.Abilita_Alim23"
+    - Name: Abilita_Drive_1
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Generale.Abilita_Drive_1"
+    - Name: Abilita_Drive_2
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Generale.Abilita_Drive_2"
+    - Name: Abilita_Drive_3
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Generale.Abilita_Drive_3"
+    - Name: Abilita_Trascina
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Generale.Abilita_Trascina"
+    - Name: Seleziona_banco_1
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Generale.Seleziona_banco_1"
+  - Name: DB_Modbus_Comm
+    Type: TagStructure
+    Children:
+    - Name: V_In_R
+      Id: g=068a37711655e4dc1f89ae2f7bf3ef41
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.V_In_R"
+    - Name: V_In_S
+      Id: g=b1da8e651b685129739c2a48bcaa6b35
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.V_In_S"
+    - Name: V_In_T
+      Id: g=40a84b096efd07d983cbdef0ebd19fd4
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.V_In_T"
+    - Name: I_In_I1
+      Id: g=a7e7dea45572a3ee15200bc59d1daaf6
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.I_In_I1"
+    - Name: I_In_I2
+      Id: g=205e0a5cf175ad7e8de5c95b7d30e94e
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.I_In_I2"
+    - Name: I_In_I3
+      Id: g=989196926b6dbc1e32ba46dd75291895
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.I_In_I3"
+    - Name: V_In_RS
+      Id: g=601440e6b06d320d0e2841fc0bbbf58b
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.V_In_RS"
+    - Name: V_In_ST
+      Id: g=78bc9f6bcd208055e822896333b9ba76
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.V_In_ST"
+    - Name: V_In_TR
+      Id: g=ff5506c70723bdcef494c18d1ab49ecc
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.V_In_TR"
+    - Name: W_In_R
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.W_In_R"
+    - Name: W_In_S
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.W_In_S"
+    - Name: W_In_T
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.W_In_T"
+    - Name: Var_In_R
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.Var_In_R"
+    - Name: Var_In_S
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.Var_In_S"
+    - Name: Var_In_T
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.Var_In_T"
+    - Name: VA_In_R
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.VA_In_R"
+    - Name: VA_In_S
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.VA_In_S"
+    - Name: VA_In_T
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.VA_In_T"
+    - Name: Cosfi_In_R
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.Cosfi_In_R"
+    - Name: Cosfi_In_S
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.Cosfi_In_S"
+    - Name: Cosfi_In_T
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.Cosfi_In_T"
+    - Name: Freq_In
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Blocks.DB_Modbus_Comm.Freq_In"
+  - Name: Safety
+    Type: TagStructure
+    Children:
+    - Name: LS_OK
+      Id: g=b9328a469304b95352accae33d42b9f3
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Safety.LS_OK"
+    - Name: LS_Warning_A
+      Id: g=8eb8f7646464515c92a365d7a22fb062
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Safety.LS_Warning_A"
+    - Name: LS_Warning_B
+      Id: g=82efa2d8d9aac186e61dc93323026f4d
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Safety.LS_Warning_B"
+  - Name: Input_Output
+    Type: TagStructure
+    Children:
+    - Name: L_Verde
+      Id: g=4c7c9553136eeff9d318fd24abcbd48c
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Input_Output.L_Verde"
+    - Name: L_Blu
+      Id: g=a273d00448b0154ca1431c98e4a08f63
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Input_Output.L_Blu"
+    - Name: L_Arancio
+      Id: g=5fc4fc463e47b4527804ac0521352b45
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Input_Output.L_Arancio"
+    - Name: L_Rossa
+      Id: g=83f38bc03c1efb2abdd0cdfc0cf3bf43
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Input_Output.L_Rossa"
+    - Name: MDB_V_Out
+      Id: g=eb33b3823c4e33c90fbeb9c0d6fa7246
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Input_Output.MDB_V_Out"
+    - Name: MDB_I_Out_R
+      Id: g=644be9c8c4bf8746bdfe4c0eb1140f56
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Input_Output.MDB_I_Out_R"
+    - Name: MDB_I_Out_S
+      Id: g=146490cf3847d2ac818c929d2c6610dc
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Input_Output.MDB_I_Out_S"
+    - Name: MDB_I_Out_T
+      Id: g=9f0762564880931f502715921f554064
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Input_Output.MDB_I_Out_T"
+    - Name: MDB_I_Out_Br
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Value: 0.0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC_EFB22029.Tags.Input_Output.MDB_I_Out_Br"

@@ -1,0 +1,128 @@
+#region Using directives
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using QPlatform.CoreBase;
+using QPlatform.HMIProject;
+using UAManagedCore;
+using OpcUa = UAManagedCore.OpcUa;
+using QPlatform.Alarm;
+using QPlatform.NetLogic;
+using QPlatform.OPCUAServer;
+using QPlatform.UI;
+using QPlatform.Core;
+using QPlatform.WebUI;
+using QPlatform.S7TCP;
+using QPlatform.CommunicationDriver;
+using QPlatform.OmronFins;
+using QPlatform.OmronEthernetIP;
+#endregion
+
+public class ImportAndExportAlarms : BaseNetLogic
+{
+    [ExportMethod]
+    public void ImportAlarms()
+    {
+        var csvPath = GetCSVFilePath();
+        if (string.IsNullOrEmpty(csvPath))
+        {
+            Log.Error("ImportExportAlarms", "No CSV file chosen, please fill the CSVPath variable");
+            return;
+        }
+
+        char? fieldDelimiter = GetFieldDelimiter();
+        if (fieldDelimiter == null || fieldDelimiter == '\0')
+            return;
+
+        bool wrapFields = GetWrapFields();
+
+        if (!File.Exists(csvPath))
+        {
+            Log.Error("ImportExportAlarms", "The file " + csvPath + " does not exist");
+            return;
+        }
+
+        try
+        {
+            using (var csvReader = new CSVFileReader(csvPath) { FieldDelimiter = fieldDelimiter.Value, WrapFields = wrapFields })
+            {
+                if (csvReader.EndOfFile())
+                {
+                    Log.Error("ImportExportAlarms", "The file " + csvPath + " is empty");
+                    return;
+                }
+
+                while (!csvReader.EndOfFile())
+                {
+                    var alarmFields = csvReader.ReadLine();
+
+                    if (alarmFields.Count < minimumFieldsNumber)
+                    {
+                        Log.Warning("ImportExportAlarms", "Wrong alarm CSV line, some parameters are missing");
+                        continue;
+                    }
+
+                    try
+                    {
+                        var alarm = ImportAlarmConfiguration(alarmFields);
+                        AddAlarmToModel(Owner, alarm);
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Info("ImportExportAlarms", "Unable to initialize alarm " + alarmFields[alarmBrowseNameField] + ": " + ex.Message);
+                    }
+
+                }
+            }
+
+            Log.Info("ImportExportAlarms", "Alarms successfully imported");
+        }
+        catch (Exception ex)
+        {
+            Log.Error("ImportExportAlarms", "Unable to import alarms: " + ex.ToString());
+        }
+    }
+
+    [ExportMethod]
+    public void ExportAlarms()
+    {
+        var csvPath = GetCSVFilePath();
+        if (string.IsNullOrEmpty(csvPath))
+        {
+            Log.Error("ImportExportAlarms", "No CSV file chosen, please fill the CSVPath variable");
+            return;
+        }
+
+        char? fieldDelimiter = GetFieldDelimiter();
+        if (fieldDelimiter == null || fieldDelimiter == '\0')
+            return;
+
+        bool wrapFields = GetWrapFields();
+
+        try
+        {
+            using (var csvWriter = new CSVFileWriter(csvPath) { FieldDelimiter = fieldDelimiter.Value, WrapFields = wrapFields})
+            {
+                foreach (var alarm in GetAlarmList())
+                {
+                    var alarmFields = CollectAlarmConfiguration(alarm);
+                    csvWriter.WriteLine(alarmFields.ToArray());
+                }
+            }
+
+            Log.Info("ImportExportAlarms", "Alarms successfully exported to " + csvPath);
+        }
+        catch (Exception ex)
+        {
+            Log.Error("ImportExportAlarms", "Unable to export alarms: " + ex);
+        }
+    }
+
+    private void AddAlarmToModel(IUANode parent, AlarmController alarm)
+    {
+        if (parent.Get<AlarmController>(alarm.BrowseName) != null)
+        {
+            Log.Warning("ImportExportAlarms", "Alarm " +

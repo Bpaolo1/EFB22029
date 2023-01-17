@@ -1,0 +1,4 @@
+Name: instances
+Type: FolderType
+Children:
+- File: BaseAlarms/BaseAlarms.yaml

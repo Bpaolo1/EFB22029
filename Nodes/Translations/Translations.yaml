@@ -1,0 +1,23 @@
+Name: Translations
+Type: FolderType
+Children:
+- Name: LocalizationDictionary1
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [8,2],
+    "Body": [
+     "","en-US",
+     "StackLightBaseDisplayName","Stack Light Base",
+     "StackLightBaseDescription","DESCRIPTION\nBase for stack light",
+     "Relative allignment","Relative allignment",
+     "Left Margin","Left Margin",
+     "Top Margin","Top Margin",
+     "Horizontal Layout","Horizontal Layout",
+     "Vertical Layout","Vertical Layout"
+    ]
+   }

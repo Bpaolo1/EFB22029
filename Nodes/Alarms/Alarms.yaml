@@ -1,0 +1,5 @@
+Name: Alarms
+Type: FolderType
+Children:
+- File: types/types.yaml
+- File: instances/instances.yaml

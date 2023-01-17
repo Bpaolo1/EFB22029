@@ -1,0 +1,38 @@
+Project:
+ Name: EFB22029_Design
+ ProjectNamespaceIndex: 4
+ Description: ''
+ Company: ''
+ Copyright: ''
+ FormatVersion: 1
+ CoreVersion: 10.0.0.134
+ Dependencies:
+  2:
+   Uri: EFB22029
+   RelativePath: EFB22029.uniqo
+  3:
+   Uri: 'urn:QPlatform:CoreBase'
+   Module: QPlatform.CoreBase
+   Version: 8.1.0.176
+  5:
+   Uri: 'urn:QPlatform:Core:Net'
+   Module: QPlatform.Core.Net
+   Version: 8.0.0.140
+  6:
+   Uri: 'urn:QPlatform:CoreBase:Net'
+   Module: QPlatform.CoreBase.Net
+   Version: 5.0.6.307
+  7:
+   Uri: 'urn:QPlatform:TagImporter'
+   Module: QPlatform.TagImporter
+   Version: 2.0.24.304
+  8:
+   Uri: 'urn:QPlatform:S7TiaProfinetDriverTagImporter'
+   Module: QPlatform.S7TiaProfinetDriverTagImporter
+   Version: 1.0.2.305
+  9:
+   Uri: 'urn:QPlatform:NetLogic'
+   Module: QPlatform.NetLogic
+   Version: 6.0.0.155
+ Nodes:
+ - File: DesignTimeNodes/CommDrivers/DriverS7TIAPROFINET1/StationS7TIAPROFINET1/TagImporter.yaml

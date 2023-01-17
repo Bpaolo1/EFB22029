@@ -1,0 +1,23 @@
+Name: TagImporter
+Type: S7TiaProfinetDriverTagImporter
+OwnerId: ns=2;g=f84a692bf12dc5b0bda300d8fd1f14b8
+Children:
+- Name: FilePath
+  Type: BaseDataVariableType
+  DataType: AbsoluteResourceUri
+  Value: "file:///C:/Users/Paolo/Desktop/EFB22029/EFB22029.ap16"
+- Name: Mode
+  Type: BaseDataVariableType
+  DataType: FetchProviderModes
+  Value: 0
+- Name: IgnoredPLCItems
+  Type: BaseDataVariableType
+  DataType: BaseDataType
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+- Name: IgnoredHMIItems
+  Type: BaseDataVariableType
+  DataType: NodeId
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+  Value: []

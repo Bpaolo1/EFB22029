@@ -1,0 +1,5 @@
+Name: Users
+Type: FolderType
+Children:
+- Name: User1
+  Type: UserType
